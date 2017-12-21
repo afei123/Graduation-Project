@@ -1,0 +1,35 @@
+buildscript {
+	ext {
+		springBootVersion = '1.5.7.RELEASE'
+	}
+	repositories {
+		mavenCentral()
+	}
+	dependencies {
+		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+	}
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'org.springframework.boot'
+
+group = 'com.example'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = 1.8
+
+repositories {
+	mavenCentral()
+}
+
+
+dependencies {
+	compile group: 'org.springframework.boot', name: 'spring-boot-starter-data-jpa', version:'1.4.4.RELEASE'
+	compile group: 'org.springframework.boot', name: 'spring-boot-starter-web', version:'1.4.4.RELEASE'
+	compile group: 'mysql', name: 'mysql-connector-java', version:'5.1.40'
+	compile group: 'org.springframework.boot', name: 'spring-boot-starter-cache', version:'1.4.4.RELEASE'
+	compile group: 'org.projectlombok', name: 'lombok', version: '1.16.12'
+	testCompile(group: 'org.springframework.boot', name: 'spring-boot-starter-test', version:'1.4.4.RELEASE') {
+		exclude(module: 'commons-logging')
+	}
+}

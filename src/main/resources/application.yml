@@ -1,0 +1,20 @@
+spring:
+  jpa:
+      database: MYSQL
+      show-sql: true
+      hibernate:
+        ddl-auto: none
+  datasource:
+      url: jdbc:mysql://localhost:3306/play
+      driver-class-name: com.mysql.jdbc.Driver
+      username: root
+      password: root
+      platform: mysql
+
+server:
+  port: 11111
+
+base:
+  howMachOne: 1
+  howMachTow: 1
+  howMachThree: 1
