@@ -12,12 +12,12 @@ import java.util.Map;
  * Created by AFei on 2018/1/11.
  */
 public class AnalysisExcel {
-    private File file;
+    private Workbook sheets;
     private List<Integer> headRowList = new ArrayList<>();
     private List<Class> classList = new ArrayList<>();
 
-    public AnalysisExcel(String filePath){
-        this.file = new File(filePath);
+    public AnalysisExcel(String filePath) throws Exception{
+        sheets = WorkbookFactory.create(new File(filePath));
     }
     public void setHeadRowList(List<Integer> headRowList){
         if(classList.size() > 0 && headRowList.size() != classList.size()){
@@ -38,7 +38,6 @@ public class AnalysisExcel {
      */
     public List getExcelInformation()throws Exception{
         ArrayList<List> lists = new ArrayList<>();
-        Workbook sheets = WorkbookFactory.create(file);
         for (int i = 0; i < sheets.getNumberOfSheets(); i++) {
             List sheet = chooseSheetMethod(sheets , i);
             lists.add(sheet);
@@ -65,7 +64,6 @@ public class AnalysisExcel {
         return getSheet(sheetNum , 0);
     }
     public List<Map<String,String>> getSheet(int sheetNum,int headRow)throws Exception{
-        Workbook sheets = WorkbookFactory.create(file);
         return getSheet(sheets.getSheetAt(sheetNum),headRow);
     }
     public List<Map<String,String>> getSheet(Sheet sheet , int headRow){
@@ -85,7 +83,6 @@ public class AnalysisExcel {
         return getSheet(sheetNum,clazz,0);
     }
     public <T> List<T> getSheet(int sheetNum , Class<T> clazz ,int headRow)throws Exception{
-        Workbook sheets = WorkbookFactory.create(file);
         return getSheet(sheets.getSheetAt(sheetNum),clazz,headRow);
     }
     public <T> List<T> getSheet(Sheet sheet , Class<T> clazz , int headRow) throws Exception {
