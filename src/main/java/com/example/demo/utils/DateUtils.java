@@ -11,7 +11,7 @@ import java.util.Locale;
 /**
  * Created by AFei on 2017/9/29.
  */
-public class dateUtils {
+public class DateUtils {
     private static final String YMDHMS_FORMAT = "yyyy-MM-dd HH:mm:ss";
     private static final String YMD_FORMAT = "yyyy-MM-dd";
 

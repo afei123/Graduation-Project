@@ -18,7 +18,7 @@ import javax.persistence.Id;
 @ToString
 @NoArgsConstructor
 @AllArgsConstructor
-public class CityAndDistrict {
+public class District {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;

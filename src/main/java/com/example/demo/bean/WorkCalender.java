@@ -3,7 +3,6 @@ package com.example.demo.bean;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.ToString;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -16,15 +15,14 @@ import java.util.Date;
  */
 @Data
 @Entity
-@ToString
 @NoArgsConstructor
 @AllArgsConstructor
-public class ManagerTodayWork {
+public class WorkCalender {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id ;
-    private long managerId;
+    private long workerId;
+    private Date workDate;
     private String description;
-    private Date createDate;
-
+    private boolean valid = true;
 }

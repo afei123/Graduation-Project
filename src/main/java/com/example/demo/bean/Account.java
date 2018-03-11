@@ -3,7 +3,6 @@ package com.example.demo.bean;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.ToString;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -15,7 +14,6 @@ import javax.persistence.Id;
  */
 @Data
 @Entity
-@ToString
 @AllArgsConstructor
 @NoArgsConstructor
 public class Account {
@@ -24,10 +22,12 @@ public class Account {
     private long id;
     private long cityId;
     private String name;
-    private String idNumber;        //身份证号
-    private long district;           //小区id
+    private String phone;
+    private String IDCardNumber;        //身份证号
+    private long districtID;           //小区id
     private double balance;         //余额
     private double userWater;       //用水量
     private String email;
+    private boolean validAccount = true;
     private boolean valid = true;
 }
