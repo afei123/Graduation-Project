@@ -8,25 +8,24 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import java.util.Date;
 
 /**
- * Created by AFei on 2017/9/28.
+ * Created by AFei on 2018/3/12.
  */
 @Data
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
-public class WaterBill {
+public class WaterRule {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
-    private long accountId;
-    private long workerId;
-    private long DistrictId;
-    private long goldId;        //余额
-    private long userWaterId;   //用水量
-    private double spend;
-    private Date createDate;
-    private boolean valid = true;
+    private long id ;
+    private long areaId;
+    private long workId;
+    private int level;
+    private double maxWater;
+    private double unitPrice;
+    private String type;
+    private boolean isCity;
+    private boolean valid;
 }

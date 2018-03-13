@@ -12,18 +12,18 @@ import javax.persistence.Id;
 
 /**
  * Created by AFei on 2017/9/28.
+ * 小区
  */
 @Data
 @Entity
-@ToString
 @NoArgsConstructor
 @AllArgsConstructor
 public class District {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
-    private long parentId;
+    private long cityId;
     private String name;
-    private int level;
+    private boolean useCityRule;
     private boolean valid = true;
 }

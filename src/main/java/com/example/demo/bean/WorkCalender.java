@@ -22,6 +22,7 @@ public class WorkCalender {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id ;
     private long workerId;
+    private long workDetailId;
     private Date workDate;
     private String description;
     private boolean valid = true;

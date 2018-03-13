@@ -11,22 +11,19 @@ import javax.persistence.Id;
 import java.util.Date;
 
 /**
- * Created by AFei on 2017/9/28.
+ * Created by AFei on 2018/3/12.
  */
 @Data
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
-public class WaterBill {
+public class UseWater {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private long id ;
     private long accountId;
-    private long workerId;
     private long DistrictId;
-    private long goldId;        //余额
-    private long userWaterId;   //用水量
-    private double spend;
+    private double meterTitle;
     private Date createDate;
     private boolean valid = true;
 }

@@ -20,12 +20,11 @@ public class Worker {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     private long cityId;
-    private long districtId;        //小区id
     private String userName;
     private String passWord;
     private String phone;
     private String email;
     private String userRole;
-    private boolean appUser;
+    private boolean appUser = true;
     private boolean valid = true;
 }
