@@ -1,11 +1,14 @@
 spring:
+  output:
+    ansi:
+      enabled: always
   jpa:
       database: MYSQL
       show-sql: true
       hibernate:
         ddl-auto: none
   datasource:
-      url: jdbc:mysql://localhost:3306/play
+      url: jdbc:mysql://localhost:3306/test
       driver-class-name: com.mysql.jdbc.Driver
       username: root
       password: root

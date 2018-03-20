@@ -1,6 +1,5 @@
 package com.example.demo.bean;
 
-import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -16,17 +15,26 @@ import java.util.Date;
 @Data
 @Entity
 @NoArgsConstructor
-@AllArgsConstructor
 public class WaterBill {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
-    private long accountId;
+    private String waterMeterId;
     private long workerId;
-    private long DistrictId;
-    private long goldId;        //余额
+    private long districtId;
+    private double gold;        //余额
     private long userWaterId;   //用水量
     private double spend;
     private Date createDate;
     private boolean valid = true;
+
+    public WaterBill(String waterMeterId,long workerId,long districtId,double gold,long userWaterId,double spend,Date createDate) {
+        this.waterMeterId = waterMeterId;
+        this.workerId = workerId;
+        this.districtId = districtId;
+        this.gold = gold;
+        this.userWaterId = userWaterId;
+        this.spend = spend;
+        this.createDate = createDate;
+    }
 }

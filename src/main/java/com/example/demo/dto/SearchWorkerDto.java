@@ -14,6 +14,6 @@ import java.util.Date;
 @AllArgsConstructor
 public class SearchWorkerDto {
     private String workerName;
-    private long districtId;
+    private long dealerId;
     private Date workDate;
 }

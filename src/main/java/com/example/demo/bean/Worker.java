@@ -19,7 +19,7 @@ public class Worker {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
-    private long cityId;
+    private long geographyId;
     private String userName;
     private String passWord;
     private String phone;

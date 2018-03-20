@@ -8,6 +8,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import java.util.Date;
 
 /**
  * Created by AFei on 2018/3/12.
@@ -16,13 +17,15 @@ import javax.persistence.Id;
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
-public class WorkDetail {
+public class WorkPlan {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id ;
     private long workerId;
     private long districtId;
-    private String Detail;
+    private String detail;
+    private Date beginDate;
+    private Date endDate;
     private boolean isOk = false;
     private boolean valid = true;
 }

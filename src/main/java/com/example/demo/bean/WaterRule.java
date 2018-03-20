@@ -24,6 +24,7 @@ public class WaterRule {
     private long workId;
     private int level;
     private double maxWater;
+    private double moreThenUpperLevel;
     private double unitPrice;
     private String type;
     private boolean isCity;

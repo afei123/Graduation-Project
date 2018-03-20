@@ -2,7 +2,6 @@ package com.example.demo.controller;
 
 import com.example.demo.bean.WaterRule;
 import com.example.demo.service.WaterRuleService;
-import com.sun.javaws.exceptions.InvalidArgumentException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

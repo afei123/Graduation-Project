@@ -24,7 +24,7 @@ public class AccountServiceImpl implements AccountService {
     public void updateAccount(Account account) {
         Account one = accountRepository.findOne(account.getId());
         one.setPhone(account.getPhone());
-        one.setDistrictID(account.getDistrictID());
+        one.setDistrictId(account.getDistrictId());
     }
 
 

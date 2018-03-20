@@ -11,6 +11,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Objects;
 
 /**
  * Created by AFei on 2017/9/28.
@@ -23,7 +24,7 @@ public class WorkerController {
     private WorkerService workerService;
 
     @PostMapping("/login")
-    public ResponseEntity<LoginInfoDto> login(@RequestBody LoginDto loginDto){
+    public ResponseEntity<Object> login(@RequestBody LoginDto loginDto){
         LoginInfoDto loginInfo = workerService.login(loginDto);
         return new ResponseEntity<>(loginInfo, HttpStatus.OK);
     }

@@ -14,5 +14,5 @@ public interface WaterRuleRepository extends JpaRepository<WaterRule,Long> {
 
     List<WaterRule> findByTypeAndAreaIdAndIsCityAndValidOrderByLevel(String type, long areaId, boolean city, boolean b);
 
-    List<WaterRule> findByAreaIdAndIsCityAndValid(long cityId, boolean b, boolean b1);
+    List<WaterRule> findByAreaIdAndIsCityAndValidOrderByLevel(long cityId, boolean b, boolean b1);
 }

@@ -23,6 +23,7 @@ public class WorkCalender {
     private long id ;
     private long workerId;
     private long workDetailId;
+    private long geographyId;
     private Date workDate;
     private String description;
     private boolean valid = true;

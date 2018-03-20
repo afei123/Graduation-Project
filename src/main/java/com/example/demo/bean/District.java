@@ -22,7 +22,7 @@ public class District {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
-    private long cityId;
+    private long geographyId;
     private String name;
     private boolean useCityRule;
     private boolean valid = true;

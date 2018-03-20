@@ -13,5 +13,8 @@ public class ListUtils {
         }
         return false;
     }
+    public static boolean isBlankList(List list){
+        return !isNotBlankList(list);
+    }
 
 }

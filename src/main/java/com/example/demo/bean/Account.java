@@ -20,10 +20,10 @@ public class Account {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
-    private long waterMeterId;          //水表号
+    private String waterMeterId;          //水表号
     private String phone;
     private String houseNumber;        //门牌号
-    private long districtID;            //小区id
+    private long districtId;            //小区id
     private String waterType;           //用水类型
     private boolean validAccount = true;
     private boolean valid = true;

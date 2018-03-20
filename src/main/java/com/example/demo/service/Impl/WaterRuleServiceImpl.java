@@ -51,13 +51,9 @@ public class WaterRuleServiceImpl implements WaterRuleService {
 
     @Override
     public List<WaterRule> searchWaterRule(long districtId) {
-        List<WaterRule> waterRuleList;
         District one = districtRepository.findOne(districtId);
-        if(one.isUseCityRule()) {
-            waterRuleList = waterRuleRepository.findByAreaIdAndIsCityAndValid(one.getCityId(),true, true);
-        }else {
-            waterRuleList = waterRuleRepository.findByAreaIdAndIsCityAndValid(districtId, false ,true);
-        }
+        boolean isUseCityRule = one.isUseCityRule();
+        List<WaterRule> waterRuleList = waterRuleRepository.findByAreaIdAndIsCityAndValidOrderByLevel(isUseCityRule ? one.getGeographyId():one.getId(), isUseCityRule, true);
         return waterRuleList;
     }
 }
